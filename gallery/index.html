@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h1>MyGallery</h1>
+  <ul>
+    <li>Home</li>
+    <li>Gallery</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h2>Explore Beautiful Moments</h2>
+    <p>Responsive Image Gallery with Filters & Lightbox</p>
+  </div>
+</section>
+
+<!-- FILTER BUTTONS -->
+<div class="filter-container">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('city')">City</button>
+  <button onclick="filterImages('animals')">Animals</button>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+  <!-- 50 Images -->
+  <!-- Nature -->
+  <script>
+    for (let i = 1; i <= 17; i++) {
+      document.write(`<img src="https://picsum.photos/400?${i}" class="nature">`);
+    }
+    for (let i = 18; i <= 34; i++) {
+      document.write(`<img src="https://picsum.photos/400?${i}" class="city">`);
+    }
+    for (let i = 35; i <= 50; i++) {
+      document.write(`<img src="https://picsum.photos/400?${i}" class="animals">`);
+    }
+  </script>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+  <div class="controls">
+    <button onclick="prevImage()">Prev</button>
+    <button onclick="nextImage()">Next</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Modern Image Gallery | Internship Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
